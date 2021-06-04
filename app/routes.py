@@ -12,7 +12,7 @@ def endpoint_name():
     my_beautiful_response_body = "Hello, World!"
     return my_beautiful_response_body
 
-@planets_bp.route("/planets", methods=["POST"])
+@planets_bp.route("", methods=["POST"])
 def handle_planets():
     request_body = request.get_json()
     new_planet = Planet(planet_name=request_body["planet_name"],

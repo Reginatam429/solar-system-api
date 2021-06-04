@@ -10,7 +10,10 @@ def create_app(test_config=None):
 
     from .routes import hello_world_bp
     app.register_blueprint(hello_world_bp)
-    
+
+    from .routes import planets_bp
+    app.register_blueprint(planets_bp)
+
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql+psycopg2://postgres:postgres@localhost:5432/solar_system_development'
 
